@@ -1,0 +1,59 @@
+import random
+chat_history=[]
+message_count = 0
+def get_reply(message):
+    if "hello" in message:
+        return random.choice(["Hello there!","Hi! nice to meet you!","Hey! How can i help?"])
+    elif "how are you" in message:
+        return "I am just code, but I feel great!"
+
+    elif "name" in message:
+        return "I am ChatBot, your friendly coding buddy!"
+
+    elif "time" in message:
+        return "You can check the current time on your device."
+
+    elif "weather" in message:
+        return "Please check your weather app for today's forecast."
+
+    elif "joke" in message:
+        return "Why did the programmer quit? They lost their domain!"
+
+    elif "food" in message:
+        return "I like talking about delicious food!"
+
+    elif "help" in message:
+        return "You can ask me about my name, time, weather, jokes, or food."
+
+    elif "thank you" in message:
+        return "You're welcome!"
+    
+
+    else:
+        return "I am not sure how to answer that yet."
+
+
+print("Hi! I am ChatBot. What is your name?")
+name = input("You: ")
+print("Nice to meet you, " + name + "! Type bye to leave.")
+
+while True:
+    message = input(name + ": ")
+    message = message.lower()
+    chat_history.append(message)
+    message_count += 1
+
+    if message == "bye":
+        print("ChatBot: Goodbye, " + name + "!")
+        break
+
+    if "what did i say" in message:
+        print("ChatBot: You said:", chat_history[:-2])
+        continue
+
+    if message_count == 5:
+        print("ChatBot: We've chatted a lot today!")
+   
+
+    reply = get_reply(message)
+    print("ChatBot: " + reply)

@@ -1,0 +1,34 @@
+print("Hi! I am ChatBot. What is your name?")
+name = input("You: ")
+print("Nice to meet you, " + name + "! Type bye to leave.")
+
+while True:
+    message = input(name + ": ")
+    message = message.lower()
+    if message == "bye":
+        print("ChatBot: Goodbye, " + name + "!")
+        break
+    elif "hello" in message:
+        print("Chatbot: Hello there!")
+    elif "how are you" in message:
+        print("chatBot: I am just code, but I feel great!")
+    elif "name" in message:
+        print("ChatBot: I am ChatBot!")
+    elif "time" in message:
+        print("chatBot: You can check the current time on your device.")
+    elif "weather" in message:
+        print("ChatBot: Please check your weather app for today's forecast.")
+
+    elif "joke" in message:
+        print("ChatBot: Why did the programmer quit? They lost their domain!")
+
+    elif "food" in message:
+        print("ChatBot: I like talking about delicious food!")
+
+    elif "help" in message:
+        print("ChatBot: You can ask me about my name, time, weather, jokes, or food.")
+
+    elif "thank you" in message:
+        print("ChatBot: You're welcome!")            
+    else:
+        print("ChatBot: I am not sure how to answer that yet.")
