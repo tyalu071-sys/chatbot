@@ -1,0 +1,3 @@
+message = "oh hello there friend"
+if "hello" in message:
+    print("found a greeting!")
